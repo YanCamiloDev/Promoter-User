@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/pesquisa"
+        android:icon="@drawable/ic_location_searching_black_24dp"
+        android:title="Pesquisar Publicações"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/arquivos"
+        android:icon="@drawable/file"
+        android:title="Arquivos"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/coonfiguracoes"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Configurações"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/sair"
+        android:icon="@drawable/exit"
+        android:title="Sair"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="promoter"
+            type="net.yan.kotlin.promoterapp.promoorigin.model.Promoter" />
+
+        <variable
+            name="click"
+            type="net.yan.kotlin.promoterapp.promoorigin.venda.Clique" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/LayoutPadding_16dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> click.onClick(promoter)}"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/LayoutPadding_16dp"
+                android:paddingBottom="@dimen/LayoutPadding_8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imagg"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="@dimen/margins"
+                    android:layout_marginEnd="@dimen/margins"
+                    app:srcCompat="@drawable/ic_account_box_black_24dp" />
+
+                <TextView
+                    android:id="@+id/textooo"
+                    style="?attr/textAppearanceBody1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margins"
+                    android:layout_marginTop="@dimen/LayoutPadding_16dp"
+                    android:layout_marginEnd="@dimen/margins"
+                    android:maxLines="2"
+                    android:text="Os artigos de testes precisam estar atualizados e com valores bem definidos de classes e objetos."
+                    app:itens="@{promoter.nome}" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>
